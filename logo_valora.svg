@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 90" width="100%">
+  <style>
+    .title-text {
+      font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #112A46;
+      letter-spacing: 3px;
+    }
+    .line-separator {
+      stroke: #8A9BB4;
+      stroke-width: 2.5px;
+    }
+    .subtitle-text {
+      font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      fill: #8A9BB4;
+      letter-spacing: 7px;
+    }
+  </style>
+  <text x="200" y="42" text-anchor="middle" class="title-text">VALORA+</text>
+  <line x1="40" y1="56" x2="360" y2="56" class="line-separator" />
+  <text x="203" y="74" text-anchor="middle" class="subtitle-text">IMPULSA LO QUE VALE</text>
+</svg>
