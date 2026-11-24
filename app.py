@@ -107,32 +107,21 @@ def make_kpi_card(title, value, subtitle, border_color="#112A46"):
 # Helper para tarjetas de recomendación prescriptiva (Receta de Acción)
 def make_recommendation_card(title, value, recommendation, border_color="#112A46", icon=""):
     icon_html = f'<span style="font-size: 1.25rem;">{icon}</span>' if icon else ''
-    return f"""
-    <div style="
-        background-color: #FFFFFF;
-        border: 1px solid #F0F2F6;
-        border-top: 5px solid {border_color};
-        padding: 22px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.05);
-        height: 220px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 15px;
-    ">
-        <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                {icon_html}
-                <p style="margin: 0; font-size: 0.85rem; color: #8B9CA7; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600;">{title}</p>
-            </div>
-            <h3 style="margin: 8px 0; font-size: 1.25rem; font-weight: 700; color: #112A46; line-height: 1.2;">{value}</h3>
-        </div>
-        <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: #112A46; line-height: 1.4; border-top: 1px solid #F0F2F6; padding-top: 10px;">
-            {recommendation}
-        </p>
-    </div>
-    """
+    return (
+        f'<div style="background-color:#FFFFFF;border:1px solid #F0F2F6;border-top:5px solid {border_color};'
+        f'padding:22px;border-radius:8px;box-shadow:0px 4px 15px rgba(0,0,0,0.05);min-height:220px;'
+        f'display:flex;flex-direction:column;justify-content:space-between;margin-bottom:15px;">'
+        f'<div>'
+        f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">'
+        f'{icon_html}<p style="margin:0;font-size:0.85rem;color:#8B9CA7;text-transform:uppercase;letter-spacing:1.2px;font-weight:600;">{title}</p>'
+        f'</div>'
+        f'<h3 style="margin:8px 0;font-size:1.25rem;font-weight:700;color:#112A46;line-height:1.2;">{value}</h3>'
+        f'</div>'
+        f'<p style="margin:10px 0 0 0;font-size:0.85rem;color:#112A46;line-height:1.4;border-top:1px solid #F0F2F6;padding-top:10px;">'
+        f'{recommendation}'
+        f'</p>'
+        f'</div>'
+    )
 
 # ==============================================================================
 # PIPELINE ETL (EXTRACCIÓN, TRANSFORMACIÓN Y LIMPIEZA)
